@@ -5,8 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tribute to Dr. Norman Borlaug</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            outline: 2px solid rgba(0, 166, 255, 0.57);
+        }
+        body {
+            font-family: sans-serif;
+        }
+        #main {
+            width: 80vw;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 50vw 28vw;
+            gap: 2vw;
+            grid-template-areas:
+                "header header"
+                "img info"
+                "footer footer"
+        }
+        #title {
+            text-align: center;
+            grid-area: header;
+        }
+        #title h1 {
+            font-size: min(8rem, 12vw);
+            line-height: 1;
+            margin: 0;
+        }
+
+        #img-div {
+            grid-area: img;
+            grid-template-columns: 100%; 
+        }
+        #image,
+        #img-caption {
+            width: 80%;
+            max-width: 100%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #tribute-info {
+            grid-area: info;
+        }
+
+    </style>
 </head>
 <body>
     <div id="main">

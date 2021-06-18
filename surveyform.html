@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+
+    <style>
+
+        *, *:before, *:after {
+            box-sizing: border-box;
+        }
+
+        :root {
+            --clr-accent: #f7c74e;
+            --clr-accent-dark: #c09016;
+            --clr-accent-light: #ffda7d;
+
+            --clr-alt: #b5c6f5;
+        }
+        ::selection {
+            background-color: var(--clr-alt);
+        }
+
+        body {
+            font-family: sans-serif;
+        }
+
+        #main {
+            width: 80vw;
+            max-width: 860px;
+            margin: min(3rem, 10vh) auto;
+        }
+
+        #title {
+            font-size: min(8.6rem, 12vw);
+            color: var(--clr-accent-dark);
+            line-height: 1;
+            margin: 0;
+        }
+
+        #survey-form {
+            font-size: 1.4rem;
+            line-height: 1.6;
+        }
+
+        form label {
+            font-weight: bold;
+            position: relative;
+        }
+        form label:after {
+            content: '';
+            position: absolute;
+            background: var(--clr-accent-light);
+            height: 0.85em;
+            width: 90%;
+            left: 4%;
+            top: 0.4em;
+            z-index: -10;
+        }
+
+        input[type=text],
+        input[type=email],
+        input[type=number] {
+            padding: 0.2em 0.4em;
+            margin: 0.6em 0;
+            border: 0;
+            border-bottom: 0.1em solid var(--clr-accent-dark);
+        }
+
+        select {
+            width: 30vw;
+            max-width: 12em;
+            padding: 0.4em 0.6em;
+            /* margin: 0.6em 0; */
+            border: 0.2em solid var(--clr-accent);
+            border-radius: 10em;
+        }
+
+        textarea {
+            width: 100%;
+            max-width: 600px;
+            resize: vertical;
+            padding: 1em;
+            border: 0;
+            border-left: 0.3em solid var(--clr-accent-dark);
+            background: transparent;
+            position: relative;
+        }
+
+        button,
+        input[type=submit] {
+            appearance: none;
+            -webkit-appearance: none;
+
+            background: var(--clr-accent-light);
+
+            width: 30vw;
+            max-width: 8em;
+            padding: 0.8rem;
+            border: 0;
+            border-radius: 40vw;
+
+            color: var(--clr-accent-dark);
+
+            font-weight: bold;
+            font-size: 1.2rem;
+            line-height: 1;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <h1 id="title">Survey Form</h1>
+        <p id="description">Please fill out this survey. Answers will help.</p>
+
+        <form action="" id="survey-form">
+
+            <label for="name" id="name-label">Name:</label>
+            <input type="text" name="name" id="name" placeholder="madeleine" required>
+            <br>
+
+            <label for="email" id="email-label">Email:</label>
+            <input type="email" name="email" id="email" placeholder="madeleine@madeleine.me" required>
+            <br>
+
+            <label for="number" id="number-label">Number:</label>
+            <input type="number" name="number" id="number" placeholder="689959469" min="589959469" max=789959469>
+            <br>
+
+            <br>
+
+            <label for="radio-one">
+                <input type="radio" id="radio-one" name="radio" value="radio-one">
+                Radio One
+            </label><br>
+            <label for="radio-two">
+                <input type="radio" id="radio-two" name="radio" value="radio-two">
+                Radio Two
+            </label><br>
+            <label for="radio-three">
+                <input type="radio" id="radio-three" name="radio" value="radio-three">
+                Radio Three
+            </label><br>
+
+            <br>
+
+            <select name="dropdown" id="dropdown">
+                <option value="one">One</option>
+                <option value="two">Two</option>
+                <option value="three">Three</option>
+                <option value="four">Four</option>
+                <option value="five">Five</option>
+            </select>
+            <br>
+
+            <br>
+
+            <label for="checkbox-one">
+                <input type="checkbox" name="checkbox-one" id="checkbox-one" value="checkbox-one">
+                Checkbox One
+            </label>
+            <br>
+
+            <label for="checkbox-two">
+                <input type="checkbox" name="checkbox-two" id="checkbox-two" value="checkbox-two">
+                Checkbox Two
+            </label>
+            <br>
+
+            <label for="checkbox-three">
+                <input type="checkbox" name="checkbox-three" id="checkbox-three" value="checkbox-three">
+                Checkbox Three
+            </label>
+            <br>
+
+            <br>
+
+            <label for="textarea">Additional Comments?</label>
+            <br>
+            <textarea name="textarea" id="textarea" rows="6" placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, possimus sunt? Eius quibusdam possimus, recusandae necessitatibus accusamus corporis in consequatur molestiae maxime deleniti, illum aut magni atque doloribus asperiores cum, inventore amet harum. Sapiente blanditiis reprehenderit veniam corporis asperiores odit quisquam quod, libero nostrum, laborum incidunt dicta deserunt nulla! Quaerat, dolorem porro repellat consectetur nostrum dicta eligendi ducimus debitis ad."></textarea>
+            <br>
+
+            <br>
+
+            <input type="submit" value="Submit" id="submit">
+        </form>
+    </div>
+</body>
+</html>
