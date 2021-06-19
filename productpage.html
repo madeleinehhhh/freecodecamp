@@ -8,29 +8,192 @@
 
     <style>
 
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --clr-main: #345934;
+  --clr-main-light: #bfd9bf;
+  --clr-accent-light: #efd0ca;
+}
 
+body {
+  font-family: 'Raleway', sans-serif;
+  padding-top: 5rem;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  font-size: 0.8rem;
+  margin: 0;
+  height: 4.4em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--clr-main);
+  color: #fff;
+}
+#header-img {
+  height: 3.6em;
+}
+
+#nav-bar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+a.nav-link {
+  text-decoration: none;
+  color: inherit;
+  padding: 0.4em 0;
+}
+a.nav-link:hover,
+a.nav-link:focus {
+  color: var(--clr-main-light);
+}
+
+#video-container {
+  margin: 0 auto;
+  padding: 3rem 0;
+  text-align: center;
+  color: var(--clr-main);
+}
+h2 {
+  font-size: min(3rem, 30vw);
+}
+#video {
+  max-width: 90%;
+  padding: 1rem;
+  margin: 0 auto;
+  display: block;
+}
+
+#info {
+  max-width: 30rem;
+  margin: 0 auto;
+  padding: 2em 0;
+}
+
+#form {
+  margin: auto 0;
+  text-align: center;
+  padding: 3rem 0;
+}
+
+  form label {
+    font-weight: bold;
+    position: relative;
+  }
+  form label:after {
+    content: '';
+    position: absolute;
+    background: var(--clr-accent-light);
+    height: 0.85em;
+    width: 90%;
+    left: 4%;
+    top: 0.4em;
+    z-index: -10;
+  }
+
+  input[type=email] {
+    padding: 0.2em 0.4em;
+    margin: 0.6em 0;
+    border: 0;
+    border-bottom: 0.1em solid var(--clr-accent-light);
+}
+
+button,
+input[type=submit] {
+  appearance: none;
+  -webkit-appearance: none;
+
+  background: var(--clr-accent-light);
+
+  padding: 0.6em;
+  border: 0;
+  border-radius: 0;
+
+  color: var(--clr-accent-dark);
+
+  font-weight: 900;
+  font-size: 0.8rem;
+  line-height: 1;
+  
+  display: block;
+  margin: 0.4em auto;
+}
+
+
+@media (max-width: 600px) {
+  * {
+    flex-direction: column;
+  }
+  
+  #header {
+    height: auto;
+    padding: 1em 0;
+  }
+  body {
+    padding-top: 8rem;
+  }
+}
 
     </style>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;700;900&display=swap" rel="stylesheet"> 
+
 </head>
 
 <body>
+    
 
     
-    <header id="header">
-        <img src="" alt="" id="header-img">
-        <nav id="nav-bar">
-            <a href="" class="nav-link"></a>
-            <a href="" class="nav-link"></a>
-            <a href="" class="nav-link"></a>
-        </nav>
-    </header>
+<header id="header">
+  <img src="https://madeleinehhhh-draft.superhi.com/madeleinehhhh-2.gif" alt="" id="header-img">
+  <nav id="nav-bar">
+    <a href="#video-container" class="nav-link">Who we are</a>
+    <a href="#form" class="nav-link">Get started today!</a>
+    <a href="#info" class="nav-link">Learn more</a>
+  </nav>
+</header>
 
-    <video id="video" width="320" height="240" controls>
-        <source src="movie.mp4" type="video/mp4">
-        <source src="movie.ogg" type="video/ogg">
-      Your browser does not support the video tag.
-      </video> 
+<div id="video-container">
+  <h2>Who we are</h2>
+  <video id="video" width="320" height="240" controls>
+    <source src="movie.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
 
+
+
+<form action="https://www.freecodecamp.com/email-submit" id="form">
+  <label for="email" id="email-label">Email:</label>
+  <input type="email" name="email" id="email" placeholder="madeleine@madeleine.me" required>
+  <br>
+  <input type="submit" value="Submit" id="submit">
+</form>
+
+
+<div id="info">
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sapien lectus, iaculis quis nunc a, facilisis pulvinar urna. Aliquam gravida rutrum felis eget egestas. Sed fermentum et purus vitae hendrerit. Duis ante enim, lobortis ut diam ac, posuere finibus nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Fusce lorem tortor, viverra at congue eget, consequat quis purus.</p>
+  <p>Vestibulum suscipit metus eget purus malesuada, sed tincidunt leo luctus. Fusce ac scelerisque urna. Fusce felis leo, aliquet ut fringilla ac, tincidunt ac elit. Aliquam at ante sit amet quam auctor interdum ut at tellus. Phasellus euismod in nunc a rhoncus. Duis congue neque ac sem commodo, nec tempor ex suscipit. Praesent ac ex hendrerit, iaculis ex vel, lacinia leo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque dui dui, ornare in mauris sit amet, aliquet mollis eros. Duis faucibus erat nec magna bibendum congue.</p>
+  <p>Suspendisse et neque nulla. Maecenas id purus tincidunt, egestas urna vel, feugiat purus. Vestibulum quis consequat felis. Integer pretium ex a euismod tempus. Proin finibus eleifend risus sed vulputate. Pellentesque porttitor, orci id vestibulum consectetur, orci mi laoreet eros, et iaculis velit nulla eu augue. Proin quis sapien velit. Cras mattis magna vel tellus pulvinar, et ornare orci porta. Nunc viverra volutpat nulla, a vestibulum sem fringilla vitae. Phasellus nec pretium sem. Mauris sit amet justo laoreet, fermentum lectus et, molestie turpis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+  <p>Duis hendrerit arcu turpis, eget lobortis odio aliquet eget. Sed iaculis libero sit amet quam iaculis sodales. Sed nibh nisl, vehicula sit amet felis quis, viverra fermentum enim. Praesent aliquam iaculis tristique. Nullam fermentum justo ut arcu dignissim congue. Donec pulvinar, neque quis viverra sollicitudin, risus nunc consequat nulla, ac fermentum neque libero ac dolor. Phasellus faucibus in sem vel ultricies. Aliquam sit amet tincidunt felis.</p>
+  <p>Curabitur auctor, tortor id vehicula dignissim, leo nisi venenatis nisi, ac viverra risus ipsum a quam. Fusce laoreet a lectus in fermentum. Nam bibendum mi sit amet diam porttitor, in dictum quam laoreet. In hac habitasse platea dictumst. Quisque elementum bibendum faucibus. Donec aliquam at ipsum sit amet imperdiet. Nulla congue ex erat, vel condimentum odio sodales at.</p>
+  <p>In ut augue a augue facilisis varius. Nunc rutrum dui in ipsum porttitor auctor. Sed mattis, massa ac ullamcorper finibus, tellus erat interdum diam, at bibendum tellus arcu ac urna. Integer interdum elementum turpis, vestibulum ultricies sem fermentum ut. Fusce cursus dolor in rutrum facilisis. Suspendisse potenti. Ut suscipit aliquam metus, eget aliquam dolor congue vulputate. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</div>
 
 
 
