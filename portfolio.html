@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M's Portfolio</title>
+
+    <style>
+        
+        *, *::after, *::before {
+            box-sizing: border-box;
+            /* outline: 5px solid rgba(0, 166, 255, 0.5); */
+        }
+
+        :root {
+            --clr-bright: #0d6fba;
+
+            --clr-main-dark: #9e3f4e;
+            --clr-main-medium: #d7765b;
+            --clr-main-light: #dcb39e;
+            --clr-main-bright: #ffc9b9;
+            --clr-main-white: #fef9f7;
+
+            --clr-accent-one: #ff6924;
+            --clr-accent-two: #dcb338;
+        }
+
+        body {
+            font-family: 'Turret Road', cursive;
+            margin: 0 2vw;
+            background-color: var(--clr-main-white);
+            padding-top: 3em;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--clr-accent-one);
+        }
+        a:hover, a:focus {
+            position: relative;
+        }
+        a:hover:after, a:focus::after {
+            content: '';
+            background-color: var(--clr-main-bright);
+            border-radius: 100% 31% 26% 39% / 72% 68% 69% 86%;
+            position: absolute;
+            height: 0.85em;
+            width: 108%;
+            left: -4%;
+            top: 0.1em;
+            z-index: -10;
+        }
+
+        #welcome-section {
+            height: 100vh;
+            padding: 20vh 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;;
+            justify-content: space-evenly;
+        }
+
+        #welcome-section h1 {
+            font-size: 12vw;
+            text-align:center;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            line-height: 0.6;
+            color: var(--clr-accent-two);
+        }
+        #welcome-section h1 img {
+            max-width: 90vw;
+        }
+
+        #welcome-section h2 {
+            font-size: 6vw;
+            font-weight: 500;
+        }
+        #welcome-section h2 a:hover,
+        #welcome-section h2 a:focus {
+            font-style: italic;
+            font-weight: 700;
+            color: var(--clr-main-white);
+        }
+
+
+        #navbar {
+            display: flex;
+            background-color: var(--clr-main-white);
+            padding: 1em;
+            width: 100%;
+            justify-content: space-evenly;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        #navbar a {
+            color: var(--clr-main-dark);
+            text-transform: uppercase;
+            font-weight: 800;
+        }
+        #navbar a:hover, #navbar a:focus {
+            position: relative;
+            color: var(--clr-main-light);
+        }
+        #navbar a:hover:after, #navbar a:focus::after {
+            background-color: var(--clr-main-dark);
+            height: 1.2em;
+            top: 0;
+        }
+
+
+        @media (min-width: 900px) {
+            body {
+                margin: auto 20vw;
+            }
+        }
+
+
+    </style>
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Turret+Road:wght@200;300;400;500;700;800&display=swap" rel="stylesheet"> 
+
+</head>
+<body>
+    <header>
+        <div id="welcome-section">
+            <h1><img src="madeleinehhhh-2.gif"> Portfolio</h1>
+            <h2><a href="https://github.com/madeleinehhhh" id="profile-link" target="_blank" rel="noreferrer noopener">Profile!</a></h2>
+        </div>
+    
+        <nav id="navbar">
+            <a href="#">Section Link</a>
+            <a href="#">Section Link</a>
+            <a href="#">Section Link</a>
+        </nav>
+    
+    </header>
+    <div id="projects">
+        <div class="project-tile">
+            <p>This is a project-tile</p>
+            <a href="#">Link!</a>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quae commodi placeat quo deleniti delectus beatae asperiores dicta, esse necessitatibus. Amet, deserunt nostrum.</p>
+            <p>Facilis sequi vel fugiat quia modi eum atque omnis perspiciatis earum? Veritatis necessitatibus labore eveniet distinctio veniam laboriosam nostrum, vitae dignissimos mollitia quaerat.</p>
+            <p>Illo aliquam quas architecto corporis autem animi et labore optio sit, suscipit vel cum asperiores, enim repudiandae eaque fuga facilis dolores nemo debitis.</p>
+            <p>Rem mollitia aut natus repellat ipsam, porro quam vitae magnam tempora, fugiat voluptate nam eveniet doloribus ex voluptatibus? Inventore quas sunt consectetur quod!</p>
+        </div>
+        <div class="project-tile">
+            <p>This is a project-tile</p>
+            <a href="#">Link!</a>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quae commodi placeat quo deleniti delectus beatae asperiores dicta, esse necessitatibus. Amet, deserunt nostrum.</p>
+            <p>Facilis sequi vel fugiat quia modi eum atque omnis perspiciatis earum? Veritatis necessitatibus labore eveniet distinctio veniam laboriosam nostrum, vitae dignissimos mollitia quaerat.</p>
+            <p>Illo aliquam quas architecto corporis autem animi et labore optio sit, suscipit vel cum asperiores, enim repudiandae eaque fuga facilis dolores nemo debitis.</p>
+            <p>Rem mollitia aut natus repellat ipsam, porro quam vitae magnam tempora, fugiat voluptate nam eveniet doloribus ex voluptatibus? Inventore quas sunt consectetur quod!</p>
+        </div>
+        <div class="project-tile">
+            <p>This is a project-tile</p>
+            <a href="#">Link!</a>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quae commodi placeat quo deleniti delectus beatae asperiores dicta, esse necessitatibus. Amet, deserunt nostrum.</p>
+            <p>Facilis sequi vel fugiat quia modi eum atque omnis perspiciatis earum? Veritatis necessitatibus labore eveniet distinctio veniam laboriosam nostrum, vitae dignissimos mollitia quaerat.</p>
+            <p>Illo aliquam quas architecto corporis autem animi et labore optio sit, suscipit vel cum asperiores, enim repudiandae eaque fuga facilis dolores nemo debitis.</p>
+            <p>Rem mollitia aut natus repellat ipsam, porro quam vitae magnam tempora, fugiat voluptate nam eveniet doloribus ex voluptatibus? Inventore quas sunt consectetur quod!</p>
+        </div>
+    </div>
+</body>
+</html>
